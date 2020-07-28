@@ -22,6 +22,7 @@ jobs:
       - run: cat output.txt
       - attach_workspace:
           at: ~/
+      - run: cat ~/output.txt
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
