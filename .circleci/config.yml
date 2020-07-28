@@ -16,6 +16,8 @@ orbs:
         - image: circleci/node:13.8.0
       steps:
         - run: echo world
+      requires:
+        - print_hello
 
 # Orchestrate or schedule a set of jobs
 workflows:
@@ -26,5 +28,3 @@ workflows:
       - welcome/run
       - print_hello
       - print_world
-        requires:
-          - print_hello
