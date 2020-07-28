@@ -11,8 +11,10 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: return 1
-      - when: on_fail
+      - run:
+        name: fail
+        command: return 1
+        when: on_fail
 
 workflows:
   my_workflow:
